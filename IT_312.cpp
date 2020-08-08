@@ -3,14 +3,6 @@
 	IT 312
 	6/12/2020
 	6-3 Final Project Building Block Four: Programming (Reading From a File)
-
-	Discussion: Since we only printed to a file in 6-1 this helped me build confidence in the final project, and a 
-	starting point for the final too. At first it was hard to find where the file was and why it wouldn't read it. 
-	Soon i fount out because i was using my desktop which the file exploroer does not show file extensions like
-	my mac, so it was Rules.txt.txt which gave me a headache for too long. After resolved eveything worked well.
-	Also want to keep the main program very clean in the main function and call other functions to do things like 
-	I did here. I imagine it will keep the workflow much easier to go back and debug. The rules are pretty much 
-	besides the stuff about tostitos chips and recording it on scratch paper etc.
 */
 
 #include <iostream>
