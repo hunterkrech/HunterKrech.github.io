@@ -6,7 +6,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Farkle Dice Game
 
-This is a console game that uses Software design, engineering, Algorithms and a custom data structure.
+This is a c++ console game that uses Software design, engineering, Algorithms and a custom data structure.
 
 ```markdown
 #include <iostream>
@@ -253,10 +253,9 @@ void ReRollPrompt(int playerIdNumber, int diceRoll[]) //See's if the player want
 	}
 }
 ```
-### Farkle Dice Game
+### Database Handler
 
-This is a console game that uses Software design, engineering, Algorithms and a custom data structure.
-
+This is a database handler written in Java for a android application.
 ```markdown
 package hunterkrech.cs360.campsiteloacator;
 
