@@ -1,5 +1,5 @@
-## Welcome to Hunter Krech's ePortfolio
-This ePortfolio is a compilation of a self-assessment, code review, artifacts of work, and narratives.
+## Hunter Krech's ePortfolio
+Welcome, this ePortfolio is a compilation of a self-assessment, code review, artifacts of work, and narratives.
 
 ### Self-Assessment
 
