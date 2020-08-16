@@ -256,7 +256,7 @@ void ReRollPrompt(int playerIdNumber, int diceRoll[]) //See's if the player want
 ### Narrative
 The first artifact is an example of the multiplayer dice game Farkle that uses random numbers to roll dice and score a player's roll. It was created in my last term in my advanced C++  programming and data structures class for my final. I selected the item because it was created totally from scratch with no existing code and was methodically planned out with pseudocode that discussed the best options for every piece of functionality. I believe this showcases that I can plan well to systematically solve problems as they arise as I did when developing this artifact originally. This artifact was improved by some original errors I missed. For example, when examining the code below only one of these statements can be evaluated to true.
  
-Even though only one can be true were still checking all 3 of them when we don't need to or should be.
+Even though only one can be true were still evaluating all 3 of them when we don't need to or should be.
 ```markdown
 if (isPlaying[playerIdNumber] == 1)//if player already is playing
 {
@@ -392,6 +392,23 @@ public class DogDBHandler extends SQLiteOpenHelper{
     }
 }
 ```
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-
+### Narrative
+For this example, I used it to show my use of databases. The only thing wrong with this one was the use of comments and the code flow was somewhat unorganized. Its also written in java which I believe shows good diversity in languages. I changed it from being messy and uncommented to this shown below. There was no real challenge to updating the artifact as most of it was self explanatory when adding comments. common practices for java for braces was the only part I had to look into which is farely differnt from the c++ above. 
+```markdown
+public class DogDBHandler extends SQLiteOpenHelper{
+    // database name and version
+    private static final int DB_VER = 1;
+    private static final String DB_NAME = "dogDB.db";
+    // table
+    public static final String TABLE_DOGS = "dogs";
+    // columns
+    public static final String COLUMN_ID = "id";
+    public static final String COLUMN_NAME = "name";
+    public static final String COLUMN_AGE = "age";
+    // constructor
+    public DogDBHandler(Context context, String name,
+                        SQLiteDatabase.CursorFactory factory, int version)
+    {
+        super(context, DB_NAME, factory, DB_VER);
+    }
+```
