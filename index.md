@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+## Welcome to Hunter Krech's ePortfolio
+This ePortfolio is a compilation of a self-assessment, code review, artifacts of work, and narratives.
 
-You can use the [editor on GitHub](https://github.com/hunterkrech/HunterKrech.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### Self-Assessment
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Farkle Dice Game
 
@@ -253,6 +253,51 @@ void ReRollPrompt(int playerIdNumber, int diceRoll[]) //See's if the player want
 	}
 }
 ```
+### Narrative
+The first artifact is an example of the multiplayer dice game Farkle that uses random numbers to roll dice and score a player's roll. It was created in my last term in my advanced C++  programming and data structures class for my final. I selected the item because it was created totally from scratch with no existing code and was methodically planned out with pseudocode that discussed the best options for every piece of functionality. I believe this showcases that I can plan well to systematically solve problems as they arise as I did when developing this artifact originally. This artifact was improved by some original errors I missed. For example, when examining the code below only one of these statements can be evaluated to true.
+ 
+Even though only one can be true were still checking all 3 of them when we don't need to or should be.
+```markdown
+if (isPlaying[playerIdNumber] == 1)//if player already is playing
+{
+	playerScores[playerIdNumber] += CountScore(diceRoll);
+	cout << CountScore(diceRoll) << " Points added to your score giving you a total of " << playerScores[playerIdNumber] << " Points" << endl;
+}
+if (isPlaying[playerIdNumber] == false && CountScore(diceRoll) >= 1000)//hadn't scored over 100 but did this turn
+{
+	cout << "Congrats you scored at least 1000 points so you score is now being recorded!" << endl;
+	playerScores[playerIdNumber] += CountScore(diceRoll);
+	cout << CountScore(diceRoll) << " Points added to your score giving you a total of " << playerScores[playerIdNumber] << " Points" << endl;
+
+}
+if
+{
+	cout << "You havn't scored over 1000 Points in a single turn yet therefore your score hasn't been recorded" << endl;
+}
+```
+I improved this to the following.
+```markdown
+if (isPlaying[playerIdNumber] == 1)//if player already is playing
+{
+	playerScores[playerIdNumber] += CountScore(diceRoll);
+	cout << CountScore(diceRoll) << " Points added to your score giving you a total of " << playerScores[playerIdNumber] << " Points" << endl;
+}
+else if (isPlaying[playerIdNumber] == false && CountScore(diceRoll) >= 1000)//hadn't scored over 100 but did this turn
+{
+	cout << "Congrats you scored at least 1000 points so you score is now being recorded!" << endl;
+	playerScores[playerIdNumber] += CountScore(diceRoll);
+	cout << CountScore(diceRoll) << " Points added to your score giving you a total of " << playerScores[playerIdNumber] << " Points" << endl;
+
+}
+else
+{
+	cout << "You havn't scored over 1000 Points in a single turn yet therefore your score hasn't been recorded" << endl;
+}
+```
+Here we only test parameters until on is true then stop testing the rest. Also if the first two don’t apply, we have an else to catch the other case. Another problem I hadn’t previously anticipated was the possibility of breaking the application if incorrect input was entered. For example, in the screenshot below we can encase the whole user input in a do-while that checks the input. If cin.fail() evaluates to true or the number entered is less then two we ask the user for input again.
+ 
+The only other adjustment I made was to the function DiceRoll where I condensed this function with the AdditionalRoll function. In the game Farkle you can choose to keep the point you have earned or roll for a double or nothing. There is no need for an additional function for this and honestly just complicates the program because I need to pass the old dice that were scored as well as the dice that were re-rolling and just isn't needed in this game. I strategically made a lot of functions for different functionality that way it would be easy to follow what was going on, but this was overkill. 
+
 ### Database Handler
 
 This is a database handler written in Java for a android application.
